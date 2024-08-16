@@ -10,6 +10,7 @@ vim.api.nvim_set_keymap('n', '<Tab>', 'gt', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<S-Tab>', 'gT', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<F8>', ':Neotree toggle<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '§', ':Neotree toggle reveal=true<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '½', ':Neotree toggle source=git_status<CR>', { noremap = true, silent = true })
 --nnoremap <C-n> :cn<CR>
 --nnoremap <C-p> :cp<CR>
 
@@ -33,21 +34,6 @@ vim.api.nvim_create_autocmd("BufRead", {
         vim.keymap.set('n', '<ENTER>', '^gF', { buffer = args.buf, silent = true })
     end,
 })
-
-function ToggleNeoTreeFullScreen()
-    local neo = require('neo-tree')
-    local view = require('neo-tree.view')
-    if view.win_config and view.is_visible() then
-        if view.win_config.width == vim.o.columns then
-            view.win_config.width = neo_tree.config.window.width or 30
-        else
-            view.win_config.width = vim.o.columns
-        end
-    end
-    neo.show()
-end
-
-vim.api.nvim_set_keymap('n', '½', '<cmd>lua ToggleNeoTreeFullScreen()<CR>', {noremap = true, silent = true})
 
 --vim.diagnostic.enable(false)
 
