@@ -60,3 +60,13 @@ vim.api.nvim_create_autocmd("FileType", {
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+local gitsigns = require('gitsigns')
+vim.keymap.set('n', '<leader>ga', gitsigns.stage_hunk)
+vim.keymap.set('n', '<leader>gu', gitsigns.undo_stage_hunk)
+vim.keymap.set('n', '<leader>gA', gitsigns.stage_buffer)
+vim.keymap.set('n', '<leader>gp', gitsigns.preview_hunk)
+vim.keymap.set('n', '<leader>gd', gitsigns.diffthis)
+vim.keymap.set('v', '<leader>ga', function() gitsigns.stage_hunk {vim.fn.line('.'), vim.fn.line('v')} end)
+vim.keymap.set('n', '<C-k>', gitsigns.prev_hunk)
+vim.keymap.set('n', '<C-j>', gitsigns.next_hunk)
