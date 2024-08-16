@@ -1,5 +1,14 @@
 local cmp = require'cmp'
-cmp.setup({
+local fuzzy_compare = require('cmp.config.compare')
+
+cmp.setup.filetype(
+    { "c",
+      "cpp",
+      "bash",
+      "lua",
+      "python",
+      "java",
+      "javascript" }, {
     mapping = {
         ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
         ['<S-Tab>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's' }),
@@ -12,27 +21,19 @@ cmp.setup({
         { name = "fuzzy_buffer" },
         { name = 'path' },
         --{ name = 'nvim_lsp' },
-    })
-})
-
---require'lspconfig'.clangd.setup{
---}
-
-local compare = require('cmp.config.compare')
-
-cmp.setup {
+    }),
     sorting = {
         priority_weight = 2,
         comparators = {
             require('cmp_fuzzy_buffer.compare'),
-            compare.offset,
-            compare.exact,
-            compare.score,
-            compare.recently_used,
-            compare.kind,
-            compare.sort_text,
-            compare.length,
-            compare.order,
+            fuzzy_compare.offset,
+            fuzzy_compare.exact,
+            fuzzy_compare.score,
+            fuzzy_compare.recently_used,
+            fuzzy_compare.kind,
+            fuzzy_compare.sort_text,
+            fuzzy_compare.length,
+            fuzzy_compare.order,
         }
     },
     sources = {
@@ -43,4 +44,7 @@ cmp.setup {
             }
         }
     },
-}
+})
+
+--require'lspconfig'.clangd.setup{
+--}
