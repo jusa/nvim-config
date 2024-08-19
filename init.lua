@@ -1,7 +1,11 @@
+require("common")
 require("config.lazy")
 require("config.nvim-cmp")
 require("config.treesitter")
 require("config.gitsigns")
+if openai_api_key_exists() then
+    require("config.gp")
+end
 require("options")
 vim.cmd "colorscheme twilight256"
 vim.cmd "highlight Normal guibg=black guifg=white"
