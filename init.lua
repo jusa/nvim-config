@@ -56,3 +56,9 @@ vim.keymap.set('n', '<leader>gd', gitsigns.diffthis)
 vim.keymap.set('v', '<leader>ga', function() gitsigns.stage_hunk {vim.fn.line('.'), vim.fn.line('v')} end)
 vim.keymap.set('n', '<C-k>', gitsigns.prev_hunk)
 vim.keymap.set('n', '<C-j>', gitsigns.next_hunk)
+
+-- tig
+vim.keymap.set('n', '<leader>tt', ':TigOpenProjectRootDir<CR>', { silent = true })
+vim.keymap.set('v', '<leader>tg', 'y:TigGrep<Space><C-R>"<CR>', { silent = true })
+vim.keymap.set('n', '<leader>tg', ':TigGrep<CR>', { silent = true })
+vim.keymap.set('n', '<leader>tb', ':TigBlame<CR>', { silent = true })
