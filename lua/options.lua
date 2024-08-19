@@ -23,6 +23,12 @@ opt.sidescrolloff = 8 -- Columns of context
 opt.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shift the text each time
 opt.mouse = "" -- Disable mouse
 opt.undolevels = 10000
+opt.undofile = true
+local undodir = vim.fn.expand("~/.local/share/nvim/undodir//")
+if vim.fn.isdirectory(undodir) == 0 then
+    vim.fn.mkdir(undodir, "p");
+end
+opt.undodir = undodir
 
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
