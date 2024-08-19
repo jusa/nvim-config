@@ -29,6 +29,9 @@ https://github.com/freddiehaddad/feline.nvim
 https://github.com/rafi/awesome-vim-colorschemes/blob/master/colors/twilight256.vim
 https://vimcolorschemes.com/rafi/awesome-vim-colorschemes
 https://linovox.com/set-neovim-nvim-colorscheme/
+https://github.com/Robitx/gp.nvim/
+# Maybe consider at some point if the other plugin is more suitable,
+https://github.com/jackMort/ChatGPT.nvim
 
 TODO
 ----
