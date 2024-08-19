@@ -11,8 +11,6 @@ vim.api.nvim_set_keymap('n', '<S-Tab>', 'gT', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<F8>', ':Neotree toggle<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '§', ':Neotree toggle reveal=true<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '½', ':Neotree toggle source=git_status<CR>', { noremap = true, silent = true })
---nnoremap <C-n> :cn<CR>
---nnoremap <C-p> :cp<CR>
 
 -- telescope keymaps
 local tele = require('telescope.builtin')
@@ -47,6 +45,7 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- gitsigns
 local gitsigns = require('gitsigns')
 vim.keymap.set('n', '<leader>ga', gitsigns.stage_hunk)
 vim.keymap.set('n', '<leader>gu', gitsigns.undo_stage_hunk)
