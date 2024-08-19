@@ -11,6 +11,7 @@ https://github.com/nvim-neo-tree/neo-tree.nvim/issues/1247
 https://github.com/freddiehaddad/feline.nvim/blob/main/USAGE.md
 https://github.com/jakemason/ouroboros.nvim
 https://github.com/nvim-telescope/telescope.nvim
+https://github.com/BurntSushi/ripgrep
 https://neovim.io/doc/user/undo.html
 https://dev.to/vonheikemen/neovim-creating-keymaps-in-lua-3n11
 https://neovim.io/doc/user/lua-guide.html
