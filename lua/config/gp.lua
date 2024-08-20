@@ -27,3 +27,5 @@ require("gp").setup({
     whisper = { disable = true },
     image = { disable = true },
 })
+
+vim.keymap.set('n', 'gpt', ':GpChatToggle popup<CR>', { noremap = true, silent = true })
