@@ -1,7 +1,7 @@
 require("common")
 
 require("gp").setup({
-    openai_api_key = { "cat", openai_api_key_exists() },
+    openai_api_key = { "cat", openai_api_key_file() },
     providers = {
         openai = {
             disable = false,
