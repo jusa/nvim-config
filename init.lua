@@ -65,3 +65,6 @@ vim.keymap.set('n', '<leader>tt', ':TigOpenProjectRootDir<CR>', { silent = true 
 vim.keymap.set('v', '<leader>tg', 'y:TigGrep<Space><C-R>"<CR>', { silent = true })
 vim.keymap.set('n', '<leader>tg', ':TigGrep<CR>', { silent = true })
 vim.keymap.set('n', '<leader>tb', ':TigBlame<CR>', { silent = true })
+
+-- Convenience for :qall<CR>
+vim.api.nvim_create_user_command('Q', 'qall', {})
