@@ -10,11 +10,11 @@ require("options")
 vim.cmd "colorscheme twilight256"
 vim.cmd "highlight Normal guibg=black guifg=white"
 vim.g.mapleader = " "
-vim.api.nvim_set_keymap('n', '<Tab>', 'gt', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<S-Tab>', 'gT', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<F8>', ':Neotree toggle<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '§', ':Neotree toggle reveal=true<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '½', ':Neotree toggle source=git_status<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<Tab>', 'gt', {noremap = true, silent = true})
+vim.keymap.set('n', '<S-Tab>', 'gT', {noremap = true, silent = true})
+vim.keymap.set('n', '<F8>', ':Neotree toggle<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '§', ':Neotree toggle reveal=true<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '½', ':Neotree toggle source=git_status<CR>', { noremap = true, silent = true })
 
 -- telescope keymaps
 local tele = require('telescope.builtin')
