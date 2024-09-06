@@ -5,6 +5,7 @@ cmp.setup.filetype(
     { "c",
       "cpp",
       "bash",
+      "sh",
       "lua",
       "python",
       "java",
