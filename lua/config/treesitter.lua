@@ -6,6 +6,7 @@ configs.setup {
     "cpp",
     "java",
     "javascript",
+    "kotlin",
     "lua",
     "markdown",
     "python",
