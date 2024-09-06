@@ -42,7 +42,7 @@ vim.api.nvim_create_autocmd("BufRead", {
 vim.api.nvim_create_autocmd("FileType", {
     pattern = { 'c', 'cpp' },
     callback = function(args)
-        vim.keymap.set('n', '<C-a>', ':Ouroboros<CR>', { buffer = args.buf, silent = true })
+        vim.keymap.set('n', '<leader>a', ':Ouroboros<CR>', { buffer = args.buf, silent = true })
     end
 })
 
