@@ -71,4 +71,6 @@ vim.keymap.set('n', '<leader>tb', ':TigBlame<CR>', { silent = true })
 vim.api.nvim_create_user_command('Q', 'qall', {})
 
 -- Tags
-vim.opt.tags = { vim.fn.expand("$HOME/src/src.common/tags"), ".git/ctags" }
+vim.opt.tags = { vim.fn.expand("$HOME/src/src.common/tags"),
+                 vim.fn.expand("$HOME/src/src.common/tags1"),
+                 ".git/ctags" }
