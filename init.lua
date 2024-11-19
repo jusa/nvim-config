@@ -3,6 +3,7 @@ require("config.lazy")
 require("config.nvim-cmp")
 require("config.treesitter")
 require("config.gitsigns")
+require("config.cppman")
 if openai_api_key_exists() then
     require("config.gp")
 end
