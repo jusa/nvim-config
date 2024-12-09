@@ -10,6 +10,7 @@ opt.incsearch = true
 opt.tabstop = 4
 opt.shiftwidth = 4
 opt.showmode = false
+opt.showcmd = false
 opt.smartcase = true -- Don't ignore case with capitals
 opt.smartindent = true -- Insert indents automatically
 opt.wrap = true
