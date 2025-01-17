@@ -1,3 +1,9 @@
+if vim.fn.executable('ctags') == 0 then
+    return {}
+end
+
+vim.fn.system('mkdir -p ' .. vim.fn.expand("$HOME/.local/share/nvim/ctags"))
+
 return {
   'ludovicchabant/vim-gutentags',
   config = function()
