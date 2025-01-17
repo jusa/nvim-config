@@ -4,6 +4,7 @@ local fuzzy_compare = require('cmp.config.compare')
 cmp.setup.filetype(
     { "c",
       "cpp",
+      "dart",
       "bash",
       "sh",
       "lua",
