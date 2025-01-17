@@ -1,8 +1,15 @@
+if vim.fn.executable('cppman') == 0 then
+    return
+end
+
 local cppman = require('cppman')
 
 cppman.setup {
-  position = 'split',
-  index_db_path = vim.fn.expand('$HOME/.local/lib/python3.10/site-packages/cppman/lib/index.db'),
+    win_opts = {
+        split = "above",
+    },
+    picker = "telescope",
+    index_db_path = vim.fn.expand('$HOME/.local/lib/python3.10/site-packages/cppman/lib/index.db'),
 }
 
 -- keymaps
