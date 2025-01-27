@@ -2,15 +2,18 @@ local cmp = require'cmp'
 local fuzzy_compare = require('cmp.config.compare')
 
 cmp.setup.filetype(
-    { "c",
+    {
+      "bash",
+      "c",
       "cpp",
       "dart",
-      "bash",
-      "sh",
+      "java",
+      "javascript",
       "lua",
       "python",
-      "java",
-      "javascript" }, {
+      "rust",
+      "sh",
+    }, {
     mapping = {
         ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
         ['<S-Tab>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's' }),
