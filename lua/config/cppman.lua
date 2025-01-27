@@ -5,7 +5,7 @@ end
 local cppman = require('cppman')
 
 cppman.setup {
-    win_opts = {
+    win = {
         split = "above",
     },
     picker = "telescope",
