@@ -10,6 +10,7 @@ configs.setup {
     "lua",
     "markdown",
     "python",
+    "vimdoc",
   },
   sync_install = false,
   ignore_install = { "" }, -- List of parsers to ignore installing
