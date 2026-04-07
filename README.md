@@ -3,6 +3,10 @@ My nvim configuration
 
 Clone to ~/.config/nvim and go.
 
+nvim-treesitter requires tree-sitter-cli installed (tree-sitter binary in PATH).
+Either download one from https://github.com/tree-sitter/tree-sitter/releases
+or build one yourself. (Requires at least rust and clang. tree-sitter/crates/cli)
+
 Resources, a list of all the web links required to make this mess, in random order.
 
 * https://github.com/tzachar/cmp-fuzzy-buffer
